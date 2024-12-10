@@ -7,35 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE77853C2D0867F3004A196F /* Madows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE7785112D0867ED004A196F /* Madows.xcdatamodeld */; };
 		DE77853D2D0867F3004A196F /* Madows.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE7785112D0867ED004A196F /* Madows.xcdatamodeld */; };
-		DE77853E2D0867F3004A196F /* MadowsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785132D0867ED004A196F /* MadowsApp.swift */; };
 		DE77853F2D0867F3004A196F /* MadowsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785132D0867ED004A196F /* MadowsApp.swift */; };
-		DE7785402D0867F3004A196F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785142D0867ED004A196F /* ContentView.swift */; };
 		DE7785412D0867F3004A196F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785142D0867ED004A196F /* ContentView.swift */; };
-		DE7785422D0867F3004A196F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785152D0867ED004A196F /* Persistence.swift */; };
 		DE7785432D0867F3004A196F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785152D0867ED004A196F /* Persistence.swift */; };
-		DE7785442D0867F3004A196F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7785162D0867F3004A196F /* Assets.xcassets */; };
 		DE7785452D0867F3004A196F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7785162D0867F3004A196F /* Assets.xcassets */; };
 		DE7785552D087A4A004A196F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE7785542D087A4A004A196F /* Info.plist */; };
+		DEB9F0962D08A28600CEE6CC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB9F0952D08A28600CEE6CC /* SwiftUI.framework */; };
+		DEB9F0982D08A4D200CEE6CC /* macOS in Resources */ = {isa = PBXBuildFile; fileRef = DEB9F0972D08A4D200CEE6CC /* macOS */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DE7785292D0867F3004A196F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE77850C2D0867ED004A196F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE77851A2D0867F3004A196F;
-			remoteInfo = "Madows (iOS)";
-		};
-		DE7785352D0867F3004A196F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE77850C2D0867ED004A196F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE7785202D0867F3004A196F;
-			remoteInfo = "Madows (macOS)";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DE7785122D0867ED004A196F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -43,39 +23,18 @@
 		DE7785142D0867ED004A196F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE7785152D0867ED004A196F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DE7785162D0867F3004A196F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE77851B2D0867F3004A196F /* Madows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Madows.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE7785212D0867F3004A196F /* Madows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Madows.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE7785282D0867F3004A196F /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE7785342D0867F3004A196F /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7785212D0867F3004A196F /* Madows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Madows.app; path = /Users/pieralexiscarvalho/Madows/build/Debug/Madows.app; sourceTree = "<absolute>"; };
 		DE7785542D087A4A004A196F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB9F0952D08A28600CEE6CC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DEB9F0972D08A4D200CEE6CC /* macOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = macOS; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DE7785182D0867F3004A196F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE77851E2D0867F3004A196F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE7785252D0867F3004A196F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE7785312D0867F3004A196F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DEB9F0962D08A28600CEE6CC /* SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +44,10 @@
 		DE77850B2D0867ED004A196F = {
 			isa = PBXGroup;
 			children = (
+				DEB9F0972D08A4D200CEE6CC /* macOS */,
 				DE7785542D087A4A004A196F /* Info.plist */,
 				DE7785102D0867ED004A196F /* Shared */,
-				DE77851C2D0867F3004A196F /* Products */,
+				DEB9F0942D08A28600CEE6CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,37 +63,17 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		DE77851C2D0867F3004A196F /* Products */ = {
+		DEB9F0942D08A28600CEE6CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE77851B2D0867F3004A196F /* Madows.app */,
-				DE7785212D0867F3004A196F /* Madows.app */,
-				DE7785282D0867F3004A196F /* Tests iOS.xctest */,
-				DE7785342D0867F3004A196F /* Tests macOS.xctest */,
+				DEB9F0952D08A28600CEE6CC /* SwiftUI.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE77851A2D0867F3004A196F /* Madows (iOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE7785482D0867F3004A196F /* Build configuration list for PBXNativeTarget "Madows (iOS)" */;
-			buildPhases = (
-				DE7785172D0867F3004A196F /* Sources */,
-				DE7785182D0867F3004A196F /* Frameworks */,
-				DE7785192D0867F3004A196F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Madows (iOS)";
-			productName = "Madows (iOS)";
-			productReference = DE77851B2D0867F3004A196F /* Madows.app */;
-			productType = "com.apple.product-type.application";
-		};
 		DE7785202D0867F3004A196F /* Madows (macOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE77854B2D0867F3004A196F /* Build configuration list for PBXNativeTarget "Madows (macOS)" */;
@@ -151,42 +91,6 @@
 			productReference = DE7785212D0867F3004A196F /* Madows.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DE7785272D0867F3004A196F /* Tests iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE77854E2D0867F3004A196F /* Build configuration list for PBXNativeTarget "Tests iOS" */;
-			buildPhases = (
-				DE7785242D0867F3004A196F /* Sources */,
-				DE7785252D0867F3004A196F /* Frameworks */,
-				DE7785262D0867F3004A196F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE77852A2D0867F3004A196F /* PBXTargetDependency */,
-			);
-			name = "Tests iOS";
-			productName = "Tests iOS";
-			productReference = DE7785282D0867F3004A196F /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		DE7785332D0867F3004A196F /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE7785512D0867F3004A196F /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				DE7785302D0867F3004A196F /* Sources */,
-				DE7785312D0867F3004A196F /* Frameworks */,
-				DE7785322D0867F3004A196F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE7785362D0867F3004A196F /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = DE7785342D0867F3004A196F /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,19 +101,8 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					DE77851A2D0867F3004A196F = {
-						CreatedOnToolsVersion = 13.4.1;
-					};
 					DE7785202D0867F3004A196F = {
 						CreatedOnToolsVersion = 13.4.1;
-					};
-					DE7785272D0867F3004A196F = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = DE77851A2D0867F3004A196F;
-					};
-					DE7785332D0867F3004A196F = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = DE7785202D0867F3004A196F;
 					};
 				};
 			};
@@ -222,64 +115,29 @@
 				Base,
 			);
 			mainGroup = DE77850B2D0867ED004A196F;
-			productRefGroup = DE77851C2D0867F3004A196F /* Products */;
+			productRefGroup = DE77850B2D0867ED004A196F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE77851A2D0867F3004A196F /* Madows (iOS) */,
 				DE7785202D0867F3004A196F /* Madows (macOS) */,
-				DE7785272D0867F3004A196F /* Tests iOS */,
-				DE7785332D0867F3004A196F /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DE7785192D0867F3004A196F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE7785442D0867F3004A196F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE77851F2D0867F3004A196F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB9F0982D08A4D200CEE6CC /* macOS in Resources */,
 				DE7785552D087A4A004A196F /* Info.plist in Resources */,
 				DE7785452D0867F3004A196F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE7785262D0867F3004A196F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE7785322D0867F3004A196F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DE7785172D0867F3004A196F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE77853E2D0867F3004A196F /* MadowsApp.swift in Sources */,
-				DE7785422D0867F3004A196F /* Persistence.swift in Sources */,
-				DE77853C2D0867F3004A196F /* Madows.xcdatamodeld in Sources */,
-				DE7785402D0867F3004A196F /* ContentView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE77851D2D0867F3004A196F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,34 +149,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE7785242D0867F3004A196F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE7785302D0867F3004A196F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DE77852A2D0867F3004A196F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE77851A2D0867F3004A196F /* Madows (iOS) */;
-			targetProxy = DE7785292D0867F3004A196F /* PBXContainerItemProxy */;
-		};
-		DE7785362D0867F3004A196F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE7785202D0867F3004A196F /* Madows (macOS) */;
-			targetProxy = DE7785352D0867F3004A196F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DE7785462D0867F3004A196F /* Debug */ = {
@@ -371,6 +202,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,71 +255,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-			};
-			name = Release;
-		};
-		DE7785492D0867F3004A196F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSMainNibFile = SwiftUI;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.senkadev.Madows;
-				PRODUCT_NAME = Madows;
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DE77854A2D0867F3004A196F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSMainNibFile = SwiftUI;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.senkadev.Madows;
-				PRODUCT_NAME = Madows;
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -500,9 +272,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 247897P99Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = SwiftUI;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -526,9 +301,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 247897P99Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = SwiftUI;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -540,81 +318,6 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		DE77854F2D0867F3004A196F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.senkadev.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Madows (iOS)";
-			};
-			name = Debug;
-		};
-		DE7785502D0867F3004A196F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.senkadev.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Madows (iOS)";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DE7785522D0867F3004A196F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.senkadev.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Madows (macOS)";
-			};
-			name = Debug;
-		};
-		DE7785532D0867F3004A196F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.senkadev.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Madows (macOS)";
 			};
 			name = Release;
 		};
@@ -630,38 +333,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE7785482D0867F3004A196F /* Build configuration list for PBXNativeTarget "Madows (iOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE7785492D0867F3004A196F /* Debug */,
-				DE77854A2D0867F3004A196F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DE77854B2D0867F3004A196F /* Build configuration list for PBXNativeTarget "Madows (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE77854C2D0867F3004A196F /* Debug */,
 				DE77854D2D0867F3004A196F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE77854E2D0867F3004A196F /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE77854F2D0867F3004A196F /* Debug */,
-				DE7785502D0867F3004A196F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DE7785512D0867F3004A196F /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE7785522D0867F3004A196F /* Debug */,
-				DE7785532D0867F3004A196F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
