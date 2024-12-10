@@ -2,6 +2,8 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct ContentView: View {
+    @State private var filePath: String = ""
+    @State private var outputLog: String = ""
     @State private var isRunning = false
     @State private var progressValue: Double = 0.0
 
@@ -54,29 +56,44 @@ struct ContentView: View {
         panel.allowedContentTypes = [.init(filenameExtension: "exe")!, .init(filenameExtension: "msi")!]
 
         if panel.runModal() == .OK, let selectedFile = panel.url?.path {
-            filePath = selectedFile
-            outputLog.append("Fichier sélectionné : \(selectedFile)\n")
+            if validateFile(selectedFile) {
+                filePath = selectedFile
+                outputLog.append("Fichier sélectionné : \(selectedFile)\n")
+            } else {
+                outputLog.append("Erreur : Le fichier sélectionné n'est pas valide.\n")
+            }
         } else {
             outputLog.append("Aucun fichier sélectionné.\n")
         }
     }
 
-    func checkAndRunExecutable(filePath: String) {
+    func validateFile(_ path: String) -> Bool {
+        // Vérifie si le fichier est accessible et a une taille non nulle.
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: path), let attributes = try? fileManager.attributesOfItem(atPath: path) {
+            if let fileSize = attributes[.size] as? Int, fileSize > 0 {
+                return true
+            }
+        }
+        return false
+    }
+
+    func checkAndInstallWine(completion: @escaping (Bool) -> Void) {
         let winePath = "/usr/local/bin/wine"
 
-        if !FileManager.default.fileExists(atPath: winePath) {
+        if FileManager.default.fileExists(atPath: winePath) {
+            completion(true) // Wine est déjà installé.
+        } else {
             outputLog.append("Wine n'est pas installé. Installation en cours...\n")
             installWine { success in
                 if success {
                     outputLog.append("Wine installé avec succès !\n")
-                    runExecutable(filePath: filePath)
+                    completion(true)
                 } else {
                     outputLog.append("Échec de l'installation de Wine.\n")
+                    completion(false)
                 }
             }
-        } else {
-            outputLog.append("Wine est déjà installé.\n")
-            runExecutable(filePath: filePath)
         }
     }
 
@@ -107,23 +124,38 @@ struct ContentView: View {
     }
 
     func runExecutable(filePath: String) {
-        let process = Process()
-        process.executableURL = URL(fileURLWithPath: "/usr/local/bin/wine")
-        process.arguments = [filePath]
+        DispatchQueue.global().async {
+            let process = Process()
+            process.executableURL = URL(fileURLWithPath: "/usr/local/bin/wine")
+            process.arguments = [filePath]
 
-        let pipe = Pipe()
-        process.standardOutput = pipe
-        process.standardError = pipe
+            let pipe = Pipe()
+            process.standardOutput = pipe
+            process.standardError = pipe
 
-        do {
-            try process.run()
-            process.waitUntilExit()
+            do {
+                try process.run()
 
-            let data = pipe.fileHandleForReading.readDataToEndOfFile()
-            let output = String(data: data, encoding: .utf8) ?? "Erreur inconnue"
-            outputLog.append(output)
-        } catch {
-            outputLog.append("Échec de l'exécution : \(error.localizedDescription)\n")
+                // Mise à jour fictive de la progression
+                for i in 0...100 {
+                    Thread.sleep(forTimeInterval: 0.05)
+                    DispatchQueue.main.async {
+                        progressValue = Double(i)
+                    }
+                }
+
+                process.waitUntilExit()
+
+                let data = pipe.fileHandleForReading.readDataToEndOfFile()
+                let output = String(data: data, encoding: .utf8) ?? "Erreur inconnue"
+                DispatchQueue.main.async {
+                    outputLog.append(output)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    outputLog.append("Échec de l'exécution : \(error.localizedDescription)\n")
+                }
+            }
         }
     }
 }
@@ -133,4 +165,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
