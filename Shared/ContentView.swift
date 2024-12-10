@@ -2,8 +2,8 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct ContentView: View {
-    @State private var filePath: String = ""
-    @State private var outputLog: String = ""
+    @State private var isRunning = false
+    @State private var progressValue: Double = 0.0
 
     var body: some View {
         VStack {
@@ -21,9 +21,22 @@ struct ContentView: View {
                 .padding()
 
             Button("Lancer le fichier") {
-                checkAndRunExecutable(filePath: filePath)
+                isRunning = true
+                progressValue = 0.0
+                checkAndInstallWine { success in
+                    if success {
+                        runExecutable(filePath: filePath)
+                    }
+                    isRunning = false
+                }
             }
             .padding()
+            .disabled(isRunning)
+
+            if isRunning {
+                ProgressView("Exécution en cours...", value: progressValue, total: 100)
+                    .padding()
+            }
 
             ScrollView {
                 Text(outputLog)
@@ -31,7 +44,7 @@ struct ContentView: View {
                     .padding()
             }
         }
-        .frame(width: 600, height: 400)
+        .frame(width: 600, height: 500)
     }
 
     func chooseFile() {
